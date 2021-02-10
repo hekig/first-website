@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 
 :root {
-  --primary--color: #047aed;
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
 }
 * {
   box-sizing: border-box;
@@ -32,7 +35,7 @@ img {
 }
 
 .navbar {
-  background-color: var(--primary--color);
+  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
 }
@@ -65,7 +68,7 @@ img {
 }
 .showcase {
   height: 400px;
-  background-color: var(--primary--color);
+  background-color: var(--primary-color);
   color: #fff;
   position: relative;
 }
@@ -103,14 +106,16 @@ img {
 .showcas-form input:focus {
   outline: none;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-content: cneter;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
+
 .card {
   background-color: #fff;
   color: #333;
@@ -136,6 +141,59 @@ img {
 .btn:hover {
   transform: scale(0.98);
 }
+
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+.lead {
+  font-size: 20px;
+}
+.stats {
+  padding-top: 100px;
+}
+.stats .grid h3 {
+  font-size: 35px;
+}
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 2rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.xl {
+  font-size: 4rem;
+}
+.text-center {
+  text-align: center;
+}
 .showcase::before,
 .showcase::after {
   content: "";
@@ -150,10 +208,6 @@ img {
   -moz-transform: skewY(-3deg);
   -ms-transform: skewY(-3deg);
 }
-.stats {
-  padding-top: 100px;
-}
-
 .my-1 {
   margin: 1rem 0;
 }
@@ -163,6 +217,82 @@ img {
 .my-3 {
   margin: 2rem 0;
 }
+.my-4 {
+  margin: 3rem 0;
+}
 .my-5 {
   margin: 4rem 0;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+.m-5 {
+  margin: 4rem;
+}
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-2 {
+  padding: 1rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+.py-5 {
+  padding: 4rem 0;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+.p-5 {
+  padding: 4rem;
+}
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+.stats .grid h3 {
+  font-size: 35px;
+}
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
 }
